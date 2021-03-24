@@ -31,15 +31,15 @@ function add(arr) {
 */
 function computeGrade(grades) {
     if(grades>=90){
-        return "A"
+        return 'A'
     }else if(grades>=80){
-        return "B"
+        return 'B'
     }else if(grades>=70){
-        return "C"
+        return 'C'
     }else if(grades>=60){
-        return "D"
+        return 'D'
     }else if(grades<60){
-        return "nc"
+        return 'nc'
     }
 }
 console.log(computeGrade(90,80,70,60,50));
