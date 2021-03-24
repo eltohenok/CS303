@@ -42,4 +42,4 @@ function computeGrade(grades) {
         return "nc"
     }
 }
-
+console.log(computeGrade(90));
