@@ -7,17 +7,17 @@ function pow(x, n) {
 }
 
 function add2(n1, n2) {
-	return n1 + n2;
+    return n1 + n2;
 }
-
-function add(arr) {
-	let count = arr.length;
-	let sum = 0;
-	for (let i=0; i<count; i++) {
-		sum += arr[i];		
-	}
-	
-	return sum;
+ 
+function add(...args) {
+    let count = arguments.length;
+    let sum = 0;
+    for (let i=0; i<count; i++) {
+        sum += arguments[i];        
+    }
+    
+    return sum;
 }
 
 /*
@@ -30,16 +30,21 @@ function add(arr) {
 	0 - 59   NC
 */
 function computeGrade(grades) {
-    if(grades>=90){
+    let sum=0;
+    let ave;
+    for(let i=0;i<grades.length;i++){
+        sum +=grades[i];
+    }
+    ave=sum/grades.length;
+    if(ave>=90){
         return 'A'
-    }else if(grades>=80){
+    }else if(ave>=80){
         return 'B'
-    }else if(grades>=70){
+    }else if(ave>=70){
         return 'C'
-    }else if(grades>=60){
+    }else if(ave>=60){
         return 'D'
-    }else if(grades<60){
-        return 'nc'
+    }else if(ave<60){
+        return 'NC'
     }
 }
-console.log(computeGrade(90,80,70,60,50));
