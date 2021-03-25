@@ -13,8 +13,26 @@ Creates an object that contains the following information from the "this" object
 }	
 */
 function analyzer() {
-	return {};
-}
+	let result={};
+	let arrKey=object.keys(this);
+	let arrValue=object.value(this);
+	result.numProperties=arrKey.length;
+	let countNumb=0;
+	for(let one of arrKey){
+		if(one.length<3){
+			countNumb++;
+		}
+	
+	result.cntShortName=countNumb;
+	let countObject=0;
+	for(let key of arrValue){
+		if(typeof key==="object"){
+			countObject++;
+		}
+	}
+	result.cntReference=countObject;
+	return result;
+}}
 
 /* Constructor for a person object
 	Person(name, country, grades) creates object
