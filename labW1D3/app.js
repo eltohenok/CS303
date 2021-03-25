@@ -13,28 +13,28 @@ Creates an object that contains the following information from the "this" object
 }	
 */
 function analyzer() {
-	let result={};
-	let arrKey=object.keys(this);
-	let arrValue=object.value(this);
-	result.numProperties=arrKey.length;
-	let countNumb=0;
-	for(let one of arrKey){
-		if(one.length<3){
-			countNumb++;
-		}
+	let result = {};
+	let ArrayOfKey = Object.keys(this);
+	let ArrayOfvalue = Object.values(this);
+	result.numProperties = ArrayOfKey.length;
+   
+	let countNum = 0;
+	for (let one of ArrayOfKey) {
+	  if (one.length < 3) countNum++;
 	}
-	result.cntShortName=countNumb;
-	let countObject=0;
-	for(let key of arrValue){
-		if(typeof key==="object"){
-			countObject++;
-		}
+	result.cntShortName = countNum;
+   
+	let countObj = 0;
+	for (let key of ArrayOfvalue) {
+	
+	  if (typeof key=== "object") {
+		countObj++;
+	  }
 	}
-	result.cntReference=countObject;
+	result.cntReference = countObj;
+   
 	return result;
-}
-
-
+  }
 /* Constructor for a person object
 	Person(name, country, grades) creates object
 	{
@@ -58,7 +58,7 @@ function Person(name, country, grades) {
         let Average=total/gradeArr.length;
         return Average;
     
-    };
+    }
 }
 
 
