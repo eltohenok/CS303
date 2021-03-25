@@ -22,7 +22,7 @@ function analyzer() {
 		if(one.length<3){
 			countNumb++;
 		}
-	
+	}
 	result.cntShortName=countNumb;
 	let countObject=0;
 	for(let key of arrValue){
@@ -32,7 +32,8 @@ function analyzer() {
 	}
 	result.cntReference=countObject;
 	return result;
-}}
+}
+
 
 /* Constructor for a person object
 	Person(name, country, grades) creates object
